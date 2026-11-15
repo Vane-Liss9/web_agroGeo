@@ -1,0 +1,247 @@
+
+{
+  "navbar": {
+    "home": "Home",
+    "howItWorks": "How it works",
+    "development": "Development",
+    "data": "Data",
+    "team": "Team",
+    "download": "Download AgroGeo"
+  },
+  "home": {
+    "eyebrow": "Data-driven agriculture",
+    "title": "Smart decisions for more",
+    "highlight": "resilient crops.",
+    "description": "We combine NASA Earth observation data, soil information, and crop characteristics to explore crop rotation strategies tailored to each field.",
+    "download": "Download AgroGeo",
+    "project": "Discover the project",
+    "note": "Environmental data to help plan the future of agriculture.",
+    "discover": "Discover how it works"
+  },
+
+  "howItWorks": {
+    "rotation": {
+      "kicker": "Our analysis process",
+      "title": "How is a crop rotation generated?",
+      "description": "To generate recommendations, we analyze climate conditions, soil characteristics, and the requirements of each crop. This information allows us to apply agricultural criteria to filter and select the most suitable candidate crops.",
+      "cards": {
+        "backTitle": "What do we consider?",
+        "climate": {
+          "title": "Climate conditions",
+          "front": "We analyze climate patterns in the area.",
+          "back": "We use NASA Earth observation data, such as temperature and precipitation, to understand climate conditions and assess which crops may adapt to them."
+        },
+        "soil": {
+          "title": "Soil characteristics",
+          "front": "We consider the conditions of the land where crops will be grown.",
+          "back": "We evaluate available soil information, such as pH and other relevant properties, to identify which crops can grow under those conditions."
+        },
+        "crops": {
+          "title": "Crop requirements",
+          "front": "We compare each crop's needs with the available conditions.",
+          "back": "We consult crop characteristics, including temperature, water, and soil requirements. Using these criteria, we filter the options and select candidate crops for rotation."
+        }
+      },
+      "resultLabel": "The result:",
+      "result": "a selection of candidate crops that may respond to the evaluated conditions and serve as a basis for developing a crop rotation proposal."
+    },
+    "app": {
+      "kicker": "From information to recommendations",
+      "title": "How do you use our application?",
+      "description": "Once the factors that influence crop selection have been identified, our application allows farmers to explore crop rotation alternatives. Discover the process, from registration to generating a recommendation.",
+      "steps": {
+        "register": {
+          "title": "Register your farm",
+          "alt": "AgroGeo registration form",
+          "description": "Farmers enter their personal information, email address, and farm location. They also add the crops included in their current rotation, with the option to register several."
+        },
+        "conditions": {
+          "title": "Check your area's conditions",
+          "alt": "Agricultural and environmental information dashboard",
+          "description": "The application displays the information registered by the user along with environmental data for the area, such as humidity and precipitation over the last seven days. From this section, users can start calculating crop rotation alternatives."
+        },
+        "explore": {
+          "title": "Explore crop rotation alternatives",
+          "alt": "Crop rotation alternative results",
+          "description": "Based on the information provided, AgroGeo generates three crop rotation proposals. Each alternative shows the crops it includes and explains why it may be suitable for the evaluated conditions."
+        },
+        "save": {
+          "title": "Select and save your rotation",
+          "alt": "Details of a selected crop rotation",
+          "description": "Farmers can select one of the alternatives to review the rotation details and learn more about its characteristics. They can also save their chosen proposal to access it later."
+        }
+      }
+    }
+  },
+
+
+  "development": {
+    "heading": {
+      "kicker": "Building the tool",
+      "title": "Project development",
+      "description": "Explore the technologies, tools, and information sources that make AgroGeo work."
+    },
+    "architecture": {
+      "kicker": "Technology architecture",
+      "title": "The technologies behind AgroGeo",
+      "description": "Each technology plays a role in the development process, from data processing to storage and management.",
+      "label": "TECHNOLOGY STACK",
+      "components": "Project components",
+      "count": "05 technologies"
+    },
+    "technologies": {
+      "python": {
+        "category": "Programming language",
+        "description": "Used to develop the logic for analyzing and processing agricultural information."
+      },
+      "django": {
+        "category": "Backend framework",
+        "description": "Provides the backend structure and manages communication between the different components of the application."
+      },
+      "sqlite": {
+        "category": "Database",
+        "description": "Stores and organizes the information required for the application to function."
+      },
+      "etl": {
+        "category": "Data preparation",
+        "name": "ETL Process",
+        "description": "Designed to extract, transform, and prepare data so it can be used in the analysis."
+      },
+      "github": {
+        "category": "Version control",
+        "description": "Used to host the project repository, manage changes, and maintain the project code."
+      }
+    },
+    "repository": {
+      "label": "SOURCE CODE",
+      "title": "Explore the project development",
+      "description": "Browse the AgroGeo repositories.",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "nasa": {
+      "kicker": "External data source",
+      "title": "Connecting agriculture with NASA data",
+      "description": "We integrate environmental information from NASA POWER to complement the analysis of field conditions and support the exploration of crop rotation strategies.",
+      "badge": "Integrated API",
+      "providesTitle": "What does it provide?",
+      "providesDescription": "NASA POWER provides weather information and environmental parameters obtained through satellite observations and analysis models. These data help describe the environmental characteristics of a geographic location.",
+      "usageTitle": "How do we use it?",
+      "usageDescription": "We retrieve daily information based on the selected coordinates and time period. The data complements AgroGeo's climate analysis to explore crop rotation alternatives.",
+      "endpointLabel": "API USED",
+      "source": "Source: NASA Langley Research Center",
+      "link": "Explore NASA POWER"
+    }
+  },
+
+  "data": {
+    "hero": {
+      "kicker": "Information for analysis",
+      "description": "We combine climate information and crop characteristics to understand the conditions of each field and explore crop rotation alternatives."
+    },
+    "nasa": {
+      "kicker": "Climate information",
+      "title": "NASA POWER data",
+      "sourceLabel": "INFORMATION SOURCE",
+      "heading": "Understanding the climate to understand the environment.",
+      "paragraph1": "NASA POWER is a NASA platform that provides meteorological information and environmental parameters through satellite observations and analysis models.",
+      "paragraph2": "At AgroGeo, we use this data to understand the climate conditions of a geographical area and relate them to the requirements of different crops.",
+      "purposeTitle": "WHY DO WE USE THIS DATA?",
+      "purposeDescription": "It allows us to analyze variables such as temperature, precipitation, and soil moisture, which influence crop development and the selection of potential crop rotation strategies.",
+      "sourceLink": "Explore NASA POWER",
+      "tableTitle": "Variables used",
+      "variableCount": "05 variables",
+      "tableColumn1": "Variable",
+      "tableColumn2": "What does it tell us?",
+      "variables": {
+        "meanTemp": {
+          "name": "Mean temperature",
+          "description": "Average air temperature at 2 meters above the surface."
+        },
+        "maxTemp": {
+          "name": "Maximum temperature",
+          "description": "Maximum daily temperature recorded."
+        },
+        "minTemp": {
+          "name": "Minimum temperature",
+          "description": "Minimum daily temperature recorded."
+        },
+        "precipitation": {
+          "name": "Corrected precipitation",
+          "description": "Amount of precipitation used to analyze rainfall conditions."
+        },
+        "rootMoisture": {
+          "name": "Root zone moisture",
+          "description": "Estimated soil moisture in the area where plant roots grow."
+        }
+      }
+    },
+    "crops": {
+      "kicker": "Agricultural information",
+      "title": "Crop data",
+      "sourceLabel": "CSV FILE · ECOCROP",
+      "heading": "Every crop has its own requirements.",
+      "paragraph1": "To complement climate information, we use a CSV file based on FAO ECOCROP data, which brings together the characteristics and environmental requirements of different plant species.",
+      "paragraph2": "We process this information to identify the conditions each crop needs, including its temperature ranges, precipitation requirements, and soil preferences.",
+      "purposeTitle": "WHAT DO WE USE THIS INFORMATION FOR?",
+      "purposeDescription": "It allows us to compare the requirements of each species with the environmental conditions of an area, identifying which crops may be better adapted to the environment.",
+      "sourceLink": "Learn about FAO",
+      "tableTitle": "Selected attributes",
+      "groupCount": "06 groups",
+      "fileLabel": "ECOCROP FILE",
+      "tableColumn1": "Information",
+      "tableColumn2": "Attributes and description",
+      "groups": {
+        "identification": {
+          "name": "Identification",
+          "description": "Scientific name and botanical family of the crop."
+        },
+        "characteristics": {
+          "name": "Characteristics",
+          "description": "Growth habit, life form, and category."
+        },
+        "temperature": {
+          "name": "Temperature",
+          "description": "Optimal temperature ranges and tolerance limits."
+        },
+        "precipitation": {
+          "name": "Precipitation",
+          "description": "Rainfall requirements and ranges the crop can tolerate."
+        },
+        "soil": {
+          "name": "Soil",
+          "description": "Soil pH, texture, and depth preferences."
+        },
+        "cycle": {
+          "name": "Crop cycle",
+          "description": "Minimum and maximum duration of the growing cycle."
+        }
+      }
+    }
+  },
+
+  "team": {
+    "intro": {
+      "kicker": "The people behind the idea",
+      "title": "Meet the team behind",
+      "paragraph1": "We chose this challenge with the goal of developing a tool that can support farmers in exploring crop alternatives and recommendations in response to changing climate conditions.",
+      "paragraph2": "We know that making agricultural decisions means thinking not only about current conditions but also about what may happen in the future. That is why we wanted to make use of technology and environmental data to offer a new perspective on crop possibilities and rotation strategies.",
+      "paragraph3": "AgroGeo represents our effort to transform information into opportunities that contribute to a more prepared, sustainable, and resilient agriculture."
+    },
+    "members": {
+      "kicker": "Our team",
+      "title": "A project built through teamwork.",
+      "description": "Meet the six people who contributed to the development of AgroGeo.",
+      "photo": "Photo",
+      "memberLabel": "TEAM MEMBER",
+      "projectTeam": "AgroGeo Team",
+      "member1": "Team member 1 name",
+      "member2": "Team member 2 name",
+      "member3": "Team member 3 name",
+      "member4": "Team member 4 name",
+      "member5": "Team member 5 name",
+      "member6": "Team member 6 name"
+    }
+  }
+
+}

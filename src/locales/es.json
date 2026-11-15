@@ -1,0 +1,250 @@
+
+{
+  "navbar": {
+    "home": "Inicio",
+    "howItWorks": "Cómo funciona",
+    "development": "Desarrollo",
+    "data": "Datos",
+    "team": "Equipo",
+    "download": "Descargar AgroGeo"
+  },
+  "home": {
+    "eyebrow": "Agricultura basada en datos",
+    "title": "Decisiones inteligentes para cultivos más",
+    "highlight": "resilientes.",
+    "description": "Combinamos datos de observación de la Tierra de la NASA, información del suelo y características de los cultivos para explorar estrategias de rotación adaptadas a cada terreno.",
+    "download": "Descargar AgroGeo",
+    "project": "Conoce el proyecto",
+    "note": "Datos ambientales que ayudan a planificar el futuro agrícola.",
+    "discover": "Descubre cómo funciona"
+  },
+  "howItWorks": {
+    "rotation": {
+      "kicker": "Nuestro proceso de análisis",
+      "title": "¿Cómo se obtiene una rotación?",
+      "description": "Para generar recomendaciones, analizamos las condiciones climáticas, las características del suelo y los requerimientos de cada cultivo. Esta información nos permite aplicar criterios agrícolas para filtrar y seleccionar los cultivos candidatos más adecuados.",
+      "cards": {
+        "backTitle": "¿Qué tenemos en cuenta?",
+        "climate": {
+          "title": "Condiciones climáticas",
+          "front": "Analizamos el comportamiento del clima en la zona.",
+          "back": "Utilizamos datos de observación de la Tierra de la NASA, como temperatura y precipitación, para conocer las condiciones climáticas y evaluar qué cultivos pueden adaptarse a ellas."
+        },
+        "soil": {
+          "title": "Características del suelo",
+          "front": "Consideramos las condiciones del terreno donde se cultivará.",
+          "back": "Evaluamos la información disponible sobre el suelo, como su pH y otras propiedades relevantes, para identificar qué cultivos pueden desarrollarse en esas condiciones."
+        },
+        "crops": {
+          "title": "Requerimientos de los cultivos",
+          "front": "Comparamos las necesidades de cada cultivo con las condiciones disponibles.",
+          "back": "Consultamos características de los cultivos, como sus necesidades de temperatura, agua y suelo. Con estos criterios filtramos las opciones y seleccionamos cultivos candidatos para la rotación."
+        }
+      },
+      "resultLabel": "El resultado:",
+      "result": "una selección de cultivos candidatos que pueden responder a las condiciones evaluadas y servir como base para construir una propuesta de rotación."
+    },
+    "app": {
+      "kicker": "De la información a la recomendación",
+      "title": "¿Cómo utilizar nuestra aplicación?",
+      "description": "Una vez identificados los factores que influyen en la selección de cultivos, nuestra aplicación permite al agricultor consultar alternativas de rotación. Conoce el proceso desde el registro hasta la generación de una recomendación.",
+      "steps": {
+        "register": {
+          "title": "Registra tu finca",
+          "alt": "Formulario de registro de AgroGeo",
+          "description": "El agricultor registra sus datos personales, el correo electrónico y la ubicación de su finca. También ingresa los cultivos que conforman su rotación actual, con la posibilidad de añadir varios."
+        },
+        "conditions": {
+          "title": "Consulta las condiciones de tu zona",
+          "alt": "Panel de información agrícola y ambiental",
+          "description": "La aplicación presenta la información registrada por el usuario junto con datos ambientales de la zona, como la humedad y las precipitaciones de los últimos siete días. Desde esta sección puede iniciar el cálculo de alternativas de rotación."
+        },
+        "explore": {
+          "title": "Explora alternativas de rotación",
+          "alt": "Resultados de alternativas de rotación de cultivos",
+          "description": "A partir de la información proporcionada, AgroGeo genera tres propuestas de rotación de cultivos. Cada alternativa muestra los cultivos que la componen y explica por qué puede ser adecuada para las condiciones evaluadas."
+        },
+        "save": {
+          "title": "Selecciona y guarda tu rotación",
+          "alt": "Detalle de una rotación de cultivos seleccionada",
+          "description": "El agricultor puede seleccionar una de las alternativas para consultar los detalles de la rotación y conocer mejor sus características. También puede guardar la propuesta elegida para tenerla disponible posteriormente."
+        }
+      }
+    }
+  },
+
+  "development": {
+    "heading": {
+      "kicker": "Construcción de la herramienta",
+      "title": "Desarrollo del proyecto",
+      "description": "Conoce las tecnologías, herramientas y fuentes de información que hacen posible el funcionamiento de AgroGeo."
+    },
+    "architecture": {
+      "kicker": "Arquitectura tecnológica",
+      "title": "Las herramientas detrás de AgroGeo",
+      "description": "Cada tecnología cumple una función dentro del desarrollo, desde el procesamiento de los datos hasta su almacenamiento y gestión.",
+      "label": "STACK TECNOLÓGICO",
+      "components": "Componentes del proyecto",
+      "count": "05 herramientas"
+    },
+    "technologies": {
+      "python": {
+        "category": "Lenguaje de programación",
+        "description": "Se utiliza para desarrollar la lógica de análisis y procesamiento de la información agrícola."
+      },
+      "django": {
+        "category": "Framework backend",
+        "description": "Permite construir la estructura del backend y gestionar la comunicación entre los diferentes componentes de la aplicación."
+      },
+      "sqlite": {
+        "category": "Base de datos",
+        "description": "Almacena y organiza la información necesaria para el funcionamiento de la aplicación."
+      },
+      "etl": {
+        "category": "Preparación de datos",
+        "name": "Proceso ETL",
+        "description": "Está orientado a extraer, transformar y preparar los datos para que puedan ser utilizados en el análisis."
+      },
+      "github": {
+        "category": "Control de versiones",
+        "description": "Se utiliza para alojar el repositorio, gestionar los cambios y mantener el código del proyecto."
+      }
+    },
+    "repository": {
+      "label": "CÓDIGO FUENTE",
+      "title": "Explora el desarrollo del proyecto",
+      "description": "Consulta los repositorios de AgroGeo.",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "nasa": {
+      "kicker": "Fuente de datos externa",
+      "title": "Conectamos la agricultura con los datos de la NASA",
+      "description": "Integramos información ambiental de NASA POWER para complementar el análisis de las condiciones de cada terreno y apoyar la exploración de estrategias de rotación de cultivos.",
+      "badge": "API integrada",
+      "providesTitle": "¿Qué nos proporciona?",
+      "providesDescription": "NASA POWER ofrece información meteorológica y parámetros ambientales obtenidos mediante observaciones satelitales y modelos de análisis. Estos datos permiten conocer características ambientales de una ubicación geográfica.",
+      "usageTitle": "¿Cómo la utilizamos?",
+      "usageDescription": "Consultamos información diaria según las coordenadas y el periodo seleccionado. Los datos obtenidos complementan el análisis climático que realiza AgroGeo para explorar alternativas de rotación de cultivos.",
+      "endpointLabel": "API UTILIZADA",
+      "source": "Fuente: NASA Langley Research Center",
+      "link": "Conocer NASA POWER"
+      
+    }
+  },
+
+  "data": {
+    "hero": {
+      "kicker": "Información para el análisis",
+      "description": "Combinamos información climática y características de los cultivos para comprender las condiciones de cada terreno y explorar alternativas de rotación."
+    },
+    "nasa": {
+      "kicker": "Información climática",
+      "title": "Datos de NASA POWER",
+      "sourceLabel": "FUENTE DE INFORMACIÓN",
+      "heading": "Conocer el clima para comprender el entorno.",
+      "paragraph1": "NASA POWER es una plataforma de la NASA que proporciona información meteorológica y parámetros ambientales mediante observaciones satelitales y modelos de análisis.",
+      "paragraph2": "En AgroGeo utilizamos estos datos para conocer las condiciones climáticas de una zona geográfica y relacionarlas con los requerimientos de los diferentes cultivos.",
+      "purposeTitle": "¿POR QUÉ UTILIZAMOS ESTOS DATOS?",
+      "purposeDescription": "Nos permiten analizar variables como la temperatura, las precipitaciones y la humedad del suelo, factores que influyen en el desarrollo de los cultivos y en la selección de posibles estrategias de rotación.",
+      "sourceLink": "Explorar NASA POWER",
+      "tableTitle": "Variables utilizadas",
+      "variableCount": "05 variables",
+      "tableColumn1": "Variable",
+      "tableColumn2": "¿Qué nos permite conocer?",
+      "variables": {
+        "meanTemp": {
+          "name": "Temperatura media",
+          "description": "Temperatura promedio del aire a 2 metros de altura."
+        },
+        "maxTemp": {
+          "name": "Temperatura máxima",
+          "description": "Temperatura máxima diaria registrada."
+        },
+        "minTemp": {
+          "name": "Temperatura mínima",
+          "description": "Temperatura mínima diaria registrada."
+        },
+        "precipitation": {
+          "name": "Precipitación corregida",
+          "description": "Cantidad de precipitación para analizar las condiciones de lluvia."
+        },
+        "rootMoisture": {
+          "name": "Humedad de la zona de raíces",
+          "description": "Estimación de la humedad del suelo en la zona donde crecen las raíces."
+        }
+      }
+    },
+    "crops": {
+      "kicker": "Información agrícola",
+      "title": "Datos de los cultivos",
+      "sourceLabel": "ARCHIVO CSV · ECOCROP",
+      "heading": "Cada cultivo tiene sus propios requerimientos.",
+      "paragraph1": "Para complementar la información climática, utilizamos un archivo CSV basado en los datos de ECOCROP de la FAO, que reúne características y requerimientos ambientales de diferentes especies vegetales.",
+      "paragraph2": "Procesamos esta información para identificar las condiciones que necesita cada cultivo, incluyendo sus rangos de temperatura, requerimientos de precipitación y preferencias relacionadas con el suelo.",
+      "purposeTitle": "¿PARA QUÉ UTILIZAMOS ESTA INFORMACIÓN?",
+      "purposeDescription": "Nos permite comparar los requerimientos de cada especie con las condiciones ambientales de una zona, identificando qué cultivos pueden adaptarse mejor al entorno.",
+      "sourceLink": "Conocer la FAO",
+      "tableTitle": "Atributos seleccionados",
+      "fileLabel": "ARCHIVO ECOCROP",
+      "groupCount": "06 grupos",
+      "tableColumn1": "Información",
+      "tableColumn2": "Atributos y descripción",
+      "groups": {
+        "identification": {
+          "name": "Identificación",
+          "description": "Nombre científico y familia botánica del cultivo."
+        },
+        "characteristics": {
+          "name": "Características",
+          "description": "Hábito de crecimiento, forma de vida y categoría."
+        },
+        "temperature": {
+          "name": "Temperatura",
+          "description": "Rangos óptimos y límites de tolerancia de temperatura."
+        },
+        "precipitation": {
+          "name": "Precipitación",
+          "description": "Requerimientos de lluvia y rangos que puede tolerar el cultivo."
+        },
+        "soil": {
+          "name": "Suelo",
+          "description": "Preferencias de pH, textura y profundidad del suelo."
+        },
+        "cycle": {
+          "name": "Ciclo de cultivo",
+          "description": "Duración mínima y máxima del ciclo de crecimiento."
+        }
+      }
+    }
+  },
+
+  "team": {
+    "intro": {
+      "kicker": "Las personas detrás de la idea",
+      "title": "Conoce al equipo detrás de",
+      "paragraph1": "Elegimos este reto con el propósito de desarrollar una herramienta que pueda apoyar a los agricultores en la búsqueda de alternativas y recomendaciones de cultivo frente a las condiciones cambiantes del clima.",
+      "paragraph2": "Sabemos que tomar decisiones agrícolas implica pensar no solo en las condiciones actuales, sino también en lo que puede suceder en el futuro. Por eso, quisimos aprovechar la tecnología y los datos ambientales para ofrecer una nueva perspectiva sobre las posibilidades de cultivo y las estrategias de rotación.",
+      "paragraph3": "AgroGeo representa nuestro esfuerzo por transformar información en oportunidades que contribuyan a una agricultura más preparada, sostenible y resiliente."
+    },
+    "members": {
+      "kicker": "Nuestro equipo",
+      "title": "Un proyecto construido en equipo.",
+      "description": "Conoce a las seis personas que hicieron parte del desarrollo de AgroGeo.",
+      "photo": "Fotografía",
+      "memberLabel": "INTEGRANTE",
+      "projectTeam": "Equipo AgroGeo",
+      "member1": "Nombre del integrante 1",
+      "member2": "Nombre del integrante 2",
+      "member3": "Nombre del integrante 3",
+      "member4": "Nombre del integrante 4",
+      "member5": "Nombre del integrante 5",
+      "member6": "Nombre del integrante 6"
+    }
+  }
+
+
+
+
+}
+
