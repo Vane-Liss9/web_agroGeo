@@ -4,13 +4,37 @@ import { useTranslation } from "react-i18next";
 function Equipo() {
   const { t } = useTranslation();
 
-  const integrantes = [
-  { id: 1, nombre: "Jhon Jairo Salcedo Jaimes", foto: "../public/imagenes/integrante4.jpeg" },
-  { id: 2, nombre: "William Harley Castillo Jaimes", foto: "../public/imagenes/integrante5.jpeg" },
-  { id: 3, nombre: "Gabriel Augusto Ortega Martínez", foto: "../public/imagenes/integrante2.jpeg" },
-  { id: 4, nombre: "Jose Miguel Orejarena Correa", foto: "../public/imagenes/integrante1.jpeg" },
-  { id: 5, nombre: "Vanessa Lisseth Arias Contreras", foto: "../public/imagenes/integrante3.jpeg" },
-  { id: 6, nombre: "Juan Bejarano", foto: "../public/imagenes/integrante6.jpeg" }
+const integrantes = [
+    {
+      id: 1,
+      nombre: "Jhon Jairo Salcedo Jaimes",
+      foto: "/imagenes/integrante4.jpeg"
+    },
+    {
+      id: 2,
+      nombre: "William Harley Castillo Jaimes",
+      foto: "/imagenes/integrante5.jpeg"
+    },
+    {
+      id: 3,
+      nombre: "Gabriel Augusto Ortega Martínez",
+      foto: "/imagenes/integrante2.jpeg"
+    },
+    {
+      id: 4,
+      nombre: "Jose Miguel Orejarena Correa",
+      foto: "/imagenes/integrante1.jpeg"
+    },
+    {
+      id: 5,
+      nombre: "Vanessa Lisseth Arias Contreras",
+      foto: "/imagenes/integrante3.jpeg"
+    },
+    {
+      id: 6,
+      nombre: "Juan david bejarano cortes",
+      foto: "/imagenes/integrante6.jpeg"
+    }
   ];
   return (
     <main className="team-page">

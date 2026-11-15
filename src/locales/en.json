@@ -102,10 +102,10 @@
         "category": "Database",
         "description": "Stores and organizes the information required for the application to function."
       },
-      "etl": {
-        "category": "Data preparation",
-        "name": "ETL Process",
-        "description": "Designed to extract, transform, and prepare data so it can be used in the analysis."
+     "etl": {
+      "name": "ETL and Data Interpretation",
+      "category": "Data Preparation and Analysis",
+      "description": "Used to extract, clean, transform, and interpret information from different sources, preparing it for integration and use across different AgroGeo processes."
       },
       "github": {
         "category": "Version control",
@@ -217,7 +217,74 @@
           "description": "Minimum and maximum duration of the growing cycle."
         }
       }
+    },
+    "gaez": {
+  "kicker": "Agricultural potential",
+  "title": "FAO GAEZ v4 data",
+  "sourceLabel": "INFORMATION SOURCE",
+  "heading": "Understanding what each crop demands from the farm.",
+  "paragraph1": "FAO GAEZ (Global Agro-Ecological Zones) is a platform from the Food and Agriculture Organization of the United Nations that estimates the attainable yield of different crops according to climate, soil, terrain, and the level of agricultural management.",
+  "paragraph2": "At AgroGeo, we compare each crop's attainable yield under high-input farming, which includes mechanization and fertilization, with its yield under low-input farming, based on manual labour and no fertilizer. The difference between both estimates helps us determine how much a crop depends on machinery and inputs.",
+  "purposeTitle": "WHY DO WE USE THIS DATA?",
+  "purposeDescription": "It allows us to classify each crop's machinery dependence as low, medium, or high. This information feeds the equipment priority and helps rank crop rotation alternatives according to the machinery available to the farmer.",
+  "sourceLink": "Explore FAO GAEZ",
+  "tableTitle": "Variables used",
+  "variableCount": "02 variables",
+  "tableColumn1": "Variable",
+  "tableColumn2": "What does it tell us?",
+  "variables": {
+    "highInput": {
+      "name": "High-input attainable yield",
+      "description": "Rain-fed attainable yield (kg/ha) under full mechanization, improved seeds, and fertilizer, based on the 1981–2010 climate."
+    },
+    "lowInput": {
+      "name": "Low-input attainable yield",
+      "description": "Rain-fed attainable yield (kg/ha) under manual labour and no fertilizer, using the same climate conditions."
     }
+  },
+  "methodTitle": "HOW DO WE OBTAIN THIS DATA?",
+  "methodSteps": {
+    "step1": "We query FAO GAEZ's public ImageServer to obtain both yield rasters for each crop available in our catalog.",
+    "step2": "We sample the data at ten agricultural zones in Colombia: Tunja, Bogotá Savannah, Pasto, Rionegro, Ibagué, Montería, Villavicencio, Piedecuesta, Valledupar, and Palmira.",
+    "step3": "At each location, we calculate the ratio between high-input and low-input yield. When low-input yield is zero, we apply a cap of 20 to avoid division by zero.",
+    "step4": "We calculate the median of the resulting ratios and classify crops into three machinery-dependence levels: low, medium, or high."
+  },
+  "coverage": "Coverage: 22 of the 41 crops in the catalog.",
+  "limitationTitle": "Scope of this information",
+  "limitationDescription": "The estimate is based on historical climate conditions from 1981–2010. It helps approximate machinery and input dependence, but it does not represent an inventory of the equipment owned by each farmer."
+},
+"nass": {
+  "kicker": "Market reference",
+  "title": "USDA NASS QuickStats data",
+  "sourceLabel": "INFORMATION SOURCE",
+  "heading": "Adding an economic reference to every crop.",
+  "paragraph1": "USDA NASS (National Agricultural Statistics Service) is the agency of the United States Department of Agriculture responsible for publishing official agricultural statistics. Through its QuickStats database, it provides information on the prices farmers receive for different agricultural products.",
+  "paragraph2": "At AgroGeo, we use these prices as an international reference to compare the relative market value of crops that may be included in a rotation, since there is no equivalent open agricultural price API for Colombia.",
+  "purposeTitle": "WHY DO WE USE THIS DATA?",
+  "purposeDescription": "It allows us to assign each crop a low, medium, or high reference price level. This classification feeds the economic priority when ranking crop rotation alternatives.",
+  "sourceLink": "Explore USDA NASS QuickStats",
+  "tableTitle": "Variable used",
+  "variableCount": "01 variable",
+  "tableColumn1": "Variable",
+  "tableColumn2": "What does it tell us?",
+  "variables": {
+    "priceReceived": {
+      "name": "Price received by farmers",
+      "description": "Average annual price received by farmers nationwide in the United States, converted to US dollars per kilogram (USD/kg)."
+    }
+  },
+  "methodTitle": "HOW DO WE OBTAIN THIS DATA?",
+  "methodSteps": {
+    "step1": "We query the QuickStats API to obtain the annual price received by farmers for each crop at the national level in the United States.",
+    "step2": "When several price series exist for the same crop, we select the most representative one, such as grain corn or fresh-market tomatoes.",
+    "step3": "We convert the original units, such as dollars per pound, hundredweight, ton, or bushel, into US dollars per kilogram (USD/kg), using the official weight for each grain.",
+    "step4": "We calculate the average of the last five years available in our dataset (2021–2025) and classify crops into three price levels: low, medium, or high."
+  },
+  "coverage": "Coverage: 26 crops, with data from 2021 to 2025.",
+  "limitationTitle": "Scope of this information",
+  "limitationDescription": "These prices correspond to the United States market and are expressed in USD/kg. They are not Colombian prices and do not include production costs. Therefore, AgroGeo uses them only as a comparative reference and acknowledges this difference as a data limitation."
+  }
+
   },
 
   "team": {

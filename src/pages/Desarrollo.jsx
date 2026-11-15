@@ -81,11 +81,13 @@ export default function Desarrollo() {
             <div className="technology-list">
               {technologies.map((tech) => (
                 <article className="technology-row" key={tech.name}>
+
                   <div className="technology-code">
                     {tech.code}
                   </div>
 
                   <div className="technology-info">
+
                     <div className="technology-title">
                       <h4>{tech.name}</h4>
 
@@ -101,9 +103,11 @@ export default function Desarrollo() {
                     </span>
 
                     <p>{tech.description}</p>
+
                   </div>
 
                   <span className="technology-arrow">↗</span>
+
                 </article>
               ))}
             </div>

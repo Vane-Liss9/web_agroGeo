@@ -101,9 +101,9 @@
         "description": "Almacena y organiza la información necesaria para el funcionamiento de la aplicación."
       },
       "etl": {
-        "category": "Preparación de datos",
-        "name": "Proceso ETL",
-        "description": "Está orientado a extraer, transformar y preparar los datos para que puedan ser utilizados en el análisis."
+        "name": "ETL e interpretación de datos",
+        "category": "Preparación y análisis de datos",
+        "description": "Se utiliza para extraer, limpiar, transformar e interpretar información de distintas fuentes, preparándola para su integración y utilización en diferentes procesos de AgroGeo."
       },
       "github": {
         "category": "Control de versiones",
@@ -216,7 +216,73 @@
           "description": "Duración mínima y máxima del ciclo de crecimiento."
         }
       }
+    },
+    "gaez": {
+  "kicker": "Potencial agrícola",
+  "title": "Datos de FAO GAEZ v4",
+  "sourceLabel": "FUENTE DE INFORMACIÓN",
+  "heading": "Conocer lo que cada cultivo demanda del terreno.",
+  "paragraph1": "FAO GAEZ (Global Agro-Ecological Zones) es una plataforma de la Organización de las Naciones Unidas para la Alimentación y la Agricultura que estima el rendimiento potencial de diferentes cultivos según las condiciones climáticas, el suelo, el terreno y el nivel de manejo agrícola.",
+  "paragraph2": "En AgroGeo comparamos el rendimiento alcanzable de cada cultivo con insumos altos, que contempla mecanización y fertilización, frente al rendimiento con insumos bajos, basado en trabajo manual y sin fertilizantes. La diferencia entre ambos permite estimar cuánto depende un cultivo de maquinaria e insumos.",
+  "purposeTitle": "¿POR QUÉ UTILIZAMOS ESTOS DATOS?",
+  "purposeDescription": "Nos permiten clasificar la dependencia de maquinaria de cada cultivo en niveles bajos, medios o altos. Esta información alimenta la prioridad de equipos y ayuda a ordenar las alternativas de rotación según la disponibilidad de maquinaria del agricultor.",
+  "sourceLink": "Explorar FAO GAEZ",
+  "tableTitle": "Variables utilizadas",
+  "variableCount": "02 variables",
+  "tableColumn1": "Variable",
+  "tableColumn2": "¿Qué nos permite conocer?",
+  "variables": {
+    "highInput": {
+      "name": "Rendimiento con insumos altos",
+      "description": "Rendimiento alcanzable en cultivo de secano (kg/ha), bajo mecanización completa, semillas mejoradas y fertilización, según el clima del periodo 1981–2010."
+    },
+    "lowInput": {
+      "name": "Rendimiento con insumos bajos",
+      "description": "Rendimiento alcanzable en cultivo de secano (kg/ha), bajo trabajo manual y sin fertilizantes, con las mismas condiciones climáticas."
     }
+  },
+  "methodTitle": "¿CÓMO OBTENEMOS ESTA INFORMACIÓN?",
+  "methodSteps": {
+    "step1": "Consultamos el ImageServer público de FAO GAEZ para obtener los dos rásteres de rendimiento de cada cultivo disponible en nuestro catálogo.",
+    "step2": "Muestreamos los datos en diez zonas agrícolas de Colombia: Tunja, Sabana de Bogotá, Pasto, Rionegro, Ibagué, Montería, Villavicencio, Piedecuesta, Valledupar y Palmira.",
+    "step3": "En cada zona calculamos la relación entre el rendimiento con insumos altos y bajos. Cuando el rendimiento con insumos bajos es cero, aplicamos un límite de 20 para evitar divisiones por cero.",
+    "step4": "Calculamos la mediana de las relaciones obtenidas y clasificamos los cultivos en tres niveles de dependencia de maquinaria: baja, media o alta."
+  },
+  "coverage": "Cobertura: 22 de los 41 cultivos del catálogo.",
+  "limitationTitle": "Alcance de esta información",
+  "limitationDescription": "La estimación se basa en condiciones climáticas históricas de 1981–2010. Permite aproximar la dependencia de maquinaria e insumos, pero no representa un inventario de los equipos que tiene cada agricultor."
+},
+"nass": {
+  "kicker": "Referencia de mercado",
+  "title": "Datos de USDA NASS QuickStats",
+  "sourceLabel": "FUENTE DE INFORMACIÓN",
+  "heading": "Incorporar una referencia económica para cada cultivo.",
+  "paragraph1": "USDA NASS (National Agricultural Statistics Service) es la agencia del Departamento de Agricultura de Estados Unidos encargada de publicar estadísticas oficiales del sector agrícola. A través de su base de datos QuickStats ofrece información sobre los precios que reciben los productores por diferentes productos agrícolas.",
+  "paragraph2": "En AgroGeo utilizamos estos precios como referencia internacional para comparar el valor relativo de los cultivos que pueden formar parte de una rotación, debido a que no contamos con una API pública equivalente de precios agrícolas para Colombia.",
+  "purposeTitle": "¿POR QUÉ UTILIZAMOS ESTOS DATOS?",
+  "purposeDescription": "Nos permiten asignar a cada cultivo un nivel de precio de referencia bajo, medio o alto. Esta clasificación alimenta la prioridad económica al momento de ordenar las alternativas de rotación.",
+  "sourceLink": "Explorar USDA NASS QuickStats",
+  "tableTitle": "Variable utilizada",
+  "variableCount": "01 variable",
+  "tableColumn1": "Variable",
+  "tableColumn2": "¿Qué nos permite conocer?",
+  "variables": {
+    "priceReceived": {
+      "name": "Precio recibido por el productor",
+      "description": "Precio promedio anual recibido por los agricultores a nivel nacional en Estados Unidos, convertido a dólares estadounidenses por kilogramo (USD/kg)."
+    }
+  },
+  "methodTitle": "¿CÓMO OBTENEMOS ESTA INFORMACIÓN?",
+  "methodSteps": {
+    "step1": "Consultamos la API de QuickStats para obtener el precio anual recibido por los productores de cada cultivo a nivel nacional en Estados Unidos.",
+    "step2": "Cuando existen varias series de precios para un mismo cultivo, seleccionamos la más representativa, como maíz en grano o tomate para mercado fresco.",
+    "step3": "Convertimos las unidades originales, como dólares por libra, quintal, tonelada o bushel, a dólares por kilogramo (USD/kg), utilizando el peso oficial correspondiente para cada grano.",
+    "step4": "Calculamos el promedio de los últimos cinco años disponibles en nuestro conjunto de datos (2021–2025) y clasificamos los cultivos en tres niveles de precio: bajo, medio o alto."
+  },
+  "coverage": "Cobertura: 26 cultivos, con datos de 2021 a 2025.",
+  "limitationTitle": "Alcance de esta información",
+  "limitationDescription": "Los precios corresponden al mercado de Estados Unidos y están expresados en USD/kg. No representan precios de Colombia ni incluyen costos de producción. Por eso, AgroGeo los utiliza únicamente como referencia comparativa y reconoce esta diferencia como una limitación de los datos."
+  }
   },
 
   "team": {

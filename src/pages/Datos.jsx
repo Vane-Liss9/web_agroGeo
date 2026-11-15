@@ -65,6 +65,27 @@ function Datos() {
     }
   ];
 
+  const gaezVariables = [
+    {
+      codigo: "yxHr",
+      nombre: t("data.gaez.variables.highInput.name"),
+      descripcion: t("data.gaez.variables.highInput.description")
+    },
+    {
+      codigo: "yxLr",
+      nombre: t("data.gaez.variables.lowInput.name"),
+      descripcion: t("data.gaez.variables.lowInput.description")
+    }
+  ];
+
+  const nassVariables = [
+    {
+      codigo: "PRICE RECEIVED",
+      nombre: t("data.nass.variables.priceReceived.name"),
+      descripcion: t("data.nass.variables.priceReceived.description")
+    }
+  ];
+
   return (
     <main className="data-page">
 
@@ -75,13 +96,11 @@ function Datos() {
             {t("data.hero.kicker")}
           </span>
 
-          <p>
-            {t("data.hero.description")}
-          </p>
+          <p>{t("data.hero.description")}</p>
         </div>
       </section>
 
-      {/* NASA POWER */}
+      {/* 01. NASA POWER */}
       <section className="data-source-section">
         <div className="container">
 
@@ -97,16 +116,13 @@ function Datos() {
 
           <div className="data-content-grid">
 
-            {/* INFORMACIÓN IZQUIERDA */}
             <div className="data-explanation">
               <span className="data-label">
                 {t("data.nasa.sourceLabel")}
               </span>
 
               <h3>{t("data.nasa.heading")}</h3>
-
               <p>{t("data.nasa.paragraph1")}</p>
-
               <p>{t("data.nasa.paragraph2")}</p>
 
               <div className="data-purpose">
@@ -124,7 +140,6 @@ function Datos() {
               </a>
             </div>
 
-            {/* TABLA DERECHA */}
             <div className="data-table-container">
               <div className="data-table-heading">
                 <div>
@@ -164,7 +179,7 @@ function Datos() {
         </div>
       </section>
 
-      {/* CSV DE CULTIVOS */}
+      {/* 02. ECOCROP */}
       <section className="data-source-section crop-data-section">
         <div className="container">
 
@@ -180,16 +195,13 @@ function Datos() {
 
           <div className="data-content-grid">
 
-            {/* INFORMACIÓN IZQUIERDA */}
             <div className="data-explanation">
               <span className="data-label">
                 {t("data.crops.sourceLabel")}
               </span>
 
               <h3>{t("data.crops.heading")}</h3>
-
               <p>{t("data.crops.paragraph1")}</p>
-
               <p>{t("data.crops.paragraph2")}</p>
 
               <div className="data-purpose">
@@ -207,7 +219,6 @@ function Datos() {
               </a>
             </div>
 
-            {/* TABLA DERECHA */}
             <div className="data-table-container">
               <div className="data-table-heading">
                 <div>
@@ -249,8 +260,175 @@ function Datos() {
         </div>
       </section>
 
+      {/* 03. FAO GAEZ */}
+      <section className="data-source-section">
+        <div className="container">
+
+          <div className="data-source-heading">
+            <span className="data-number">03</span>
+            <div>
+              <span className="section-kicker">
+                {t("data.gaez.kicker")}
+              </span>
+              <h2>{t("data.gaez.title")}</h2>
+            </div>
+          </div>
+
+          <div className="data-content-grid gaez-content-grid">
+
+            <div className="data-explanation">
+              <span className="data-label">
+                {t("data.gaez.sourceLabel")}
+              </span>
+
+              <h3>{t("data.gaez.heading")}</h3>
+              <p>{t("data.gaez.paragraph1")}</p>
+              <p>{t("data.gaez.paragraph2")}</p>
+
+              <div className="data-purpose">
+                <span>{t("data.gaez.purposeTitle")}</span>
+                <p>{t("data.gaez.purposeDescription")}</p>
+              </div>
+
+              <p className="data-coverage">
+                {t("data.gaez.coverage")}
+              </p>
+
+              <a
+                className="data-source-link"
+                href="https://gaez.fao.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("data.gaez.sourceLink")} <span>↗</span>
+              </a>
+            </div>
+
+            <div className="data-table-container">
+              <div className="data-table-heading">
+                <div>
+                  <span>FAO GAEZ v4</span>
+                  <h3>{t("data.gaez.tableTitle")}</h3>
+                </div>
+                <span className="data-count">
+                  {t("data.gaez.variableCount")}
+                </span>
+              </div>
+
+              <div className="data-table-scroll">
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th>{t("data.gaez.tableColumn1")}</th>
+                      <th>{t("data.gaez.tableColumn2")}</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {gaezVariables.map((variable) => (
+                      <tr key={variable.codigo}>
+                        <td>
+                          <strong>{variable.nombre}</strong>
+                          <code>{variable.codigo}</code>
+                        </td>
+                        <td>{variable.descripcion}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 04. USDA NASS */}
+      <section className="data-source-section">
+        <div className="container">
+
+          <div className="data-source-heading">
+            <span className="data-number">04</span>
+            <div>
+              <span className="section-kicker">
+                {t("data.nass.kicker")}
+              </span>
+              <h2>{t("data.nass.title")}</h2>
+            </div>
+          </div>
+
+          <div className="data-content-grid gaez-content-grid">
+
+            <div className="data-explanation">
+              <span className="data-label">
+                {t("data.nass.sourceLabel")}
+              </span>
+
+              <h3>{t("data.nass.heading")}</h3>
+              <p>{t("data.nass.paragraph1")}</p>
+              <p>{t("data.nass.paragraph2")}</p>
+
+              <div className="data-purpose">
+                <span>{t("data.nass.purposeTitle")}</span>
+                <p>{t("data.nass.purposeDescription")}</p>
+              </div>
+
+              <p className="data-coverage">
+                {t("data.nass.coverage")}
+              </p>
+
+              <a
+                className="data-source-link"
+                href="https://quickstats.nass.usda.gov"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("data.nass.sourceLink")} <span>↗</span>
+              </a>
+            </div>
+
+            <div className="data-table-container">
+              <div className="data-table-heading">
+                <div>
+                  <span>USDA NASS</span>
+                  <h3>{t("data.nass.tableTitle")}</h3>
+                </div>
+                <span className="data-count">
+                  {t("data.nass.variableCount")}
+                </span>
+              </div>
+
+              <div className="data-table-scroll">
+                <table className="data-table">
+                  <thead>
+                    <tr>
+                      <th>{t("data.nass.tableColumn1")}</th>
+                      <th>{t("data.nass.tableColumn2")}</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {nassVariables.map((variable) => (
+                      <tr key={variable.codigo}>
+                        <td>
+                          <strong>{variable.nombre}</strong>
+                          <code>{variable.codigo}</code>
+                        </td>
+                        <td>{variable.descripcion}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
 
 export default Datos;
+
