@@ -780,10 +780,6 @@ a {
     font-size: 10px;
   }
 
-  .hero {
-    min-height: 760px;
-    min-height: 100svh;
-  }
 
   .hero-image {
     background-position: 60% center;
@@ -910,6 +906,14 @@ a {
   .footer-copy {
     white-space: normal;
   }
+
+  .architecture-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+  }
+
 }
 
 
@@ -1866,14 +1870,6 @@ a {
   }
 }
 
-@media (max-width: 480px) {
-  .architecture-panel-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-}
 
 
 /* DIRECCIÓN DEL ENDPOINT NASA POWER */
@@ -2624,10 +2620,6 @@ a {
   text-align: left;
 }
 
-.hero {
-  margin-top: -115px !important;
-}
-
 
 .repository-access {
   width: fit-content;
@@ -2744,17 +2736,71 @@ a {
   font-size: 12px;
 }
 
+
+/* Menú superpuesto sobre la portada */
+.site-header.site-header-home {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* Portada */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  margin-top: 0 !important;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+/* Imagen de fondo */
+.hero-image,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 48px, 1180px);
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 150px;
+  padding-bottom: 90px;
+  justify-content: center;
+}
+
+/* Indicador para descubrir el resto de la página */
+.scroll-cue {
+  z-index: 2;
+}
+
+/* Ajustes exclusivos para móviles */
 @media (max-width: 768px) {
   .hero {
-    margin-top: -115px !important;
     min-height: 100svh;
     height: auto;
+    overflow: hidden;
   }
 
   .hero-content {
     min-height: 100svh;
-    box-sizing: border-box;
     padding-top: 155px;
-    padding-bottom: 90px;
+    padding-bottom: 100px;
   }
 }

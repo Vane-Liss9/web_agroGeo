@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./styles.css";
 import "./animations.css";
@@ -14,7 +14,7 @@ import Equipo from "./pages/Equipo";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <div className="site">
 
@@ -64,7 +64,7 @@ function App() {
 
       </div>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
