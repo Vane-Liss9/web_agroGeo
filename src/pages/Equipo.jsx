@@ -32,7 +32,7 @@ const integrantes = [
     },
     {
       id: 6,
-      nombre: "Juan david bejarano cortes",
+      nombre: "Juan David Bejarano Cortes",
       foto: "/imagenes/integrante6.jpeg"
     }
   ];
